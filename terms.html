@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms and Conditions — Data Inspector Pro</title>
+<style>
+  :root {
+    --bg: #f6f8f9;
+    --surface: #ffffff;
+    --ink: #14191c;
+    --ink-soft: #4b5760;
+    --muted: #7c8890;
+    --rule: #dde3e6;
+    --accent: #1c8ea6;
+    --accent-ink: #0d5c6c;
+    --accent-wash: #e6f4f7;
+    --warn-ink: #8a4b12;
+    --warn-wash: #fbf0e3;
+  }
+  :root[data-theme="dark"] {
+    --bg: #12161a;
+    --surface: #171d22;
+    --ink: #e9edef;
+    --ink-soft: #b6c0c6;
+    --muted: #7c8890;
+    --rule: #262f35;
+    --accent: #4bb9cf;
+    --accent-ink: #8fdbe9;
+    --accent-wash: #16282d;
+    --warn-ink: #e3a86b;
+    --warn-wash: #2a2015;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12161a;
+      --surface: #171d22;
+      --ink: #e9edef;
+      --ink-soft: #b6c0c6;
+      --muted: #7c8890;
+      --rule: #262f35;
+      --accent: #4bb9cf;
+      --accent-ink: #8fdbe9;
+      --accent-wash: #16282d;
+      --warn-ink: #e3a86b;
+      --warn-wash: #2a2015;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 88px 24px 120px;
+  }
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent-wash);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  h1 {
+    margin: 22px 0 6px;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-weight: 650;
+    text-wrap: balance;
+  }
+
+  .meta {
+    margin: 0 0 40px;
+    font-size: 14px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lede {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0 0 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .lede strong { color: var(--ink); font-weight: 600; }
+
+  section {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  .num {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  h2 {
+    margin: 6px 0 14px;
+    font-size: 19px;
+    font-weight: 640;
+    letter-spacing: -0.005em;
+  }
+
+  p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+    max-width: 60ch;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+  }
+  ul:last-child { margin-bottom: 0; }
+  li {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin-bottom: 6px;
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.92em;
+    background: var(--accent-wash);
+    color: var(--accent-ink);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+
+  .callout {
+    display: flex;
+    gap: 12px;
+    background: var(--warn-wash);
+    color: var(--warn-ink);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 14px;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .callout strong { color: inherit; }
+
+  a { color: var(--accent-ink); text-decoration-color: var(--rule); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--accent-ink); }
+
+  .contact {
+    margin-top: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .contact a {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent-ink);
+  }
+
+  footer {
+    margin-top: 56px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 480px) {
+    .page { padding: 56px 20px 80px; }
+    h1 { font-size: 27px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <span class="kicker">Terms and Conditions</span>
+  <h1>The rules for using Data Inspector Pro.</h1>
+  <p class="meta">Effective August 11, 2026</p>
+
+  <p class="lede">
+    Short version: use the app to inspect and edit your own data files,
+    <strong>keep your own backups</strong>, and don't redistribute the app
+    itself. The rest of this page is the detail behind that.
+  </p>
+
+  <section>
+    <span class="num">01</span>
+    <h2>Acceptance</h2>
+    <p>By downloading, installing, or using Data Inspector Pro ("the app"),
+    you agree to these terms. If you don't agree, don't use the app.</p>
+  </section>
+
+  <section>
+    <span class="num">02</span>
+    <h2>License</h2>
+    <p>You're granted a personal, non-exclusive, non-transferable license to
+    run the app on Macs you own or control, subject to the standard Apple
+    Media Services terms that come with every Mac App Store download. You may
+    not redistribute, resell, decompile, or reverse-engineer the app beyond
+    what applicable law permits.</p>
+  </section>
+
+  <section>
+    <span class="num">03</span>
+    <h2>Your data and files</h2>
+    <p>Every file you open — SQLite, Realm, Core Data, SwiftData, JSON or
+    property list — is yours. The app reads and, when you unlock it, writes
+    directly to that file on your disk. You are responsible for the files you
+    choose to open and edit.</p>
+    <div class="callout">
+      <span>⚠</span>
+      <span><strong>Editing writes to your file immediately.</strong> Files
+      open read-only by default, and a safety copy is made automatically the
+      first time you unlock one — but that copy is a convenience, not a
+      guarantee. Keep your own backups of anything that matters, especially
+      before bulk edits or imports.</span>
+    </div>
+  </section>
+
+  <section>
+    <span class="num">04</span>
+    <h2>No warranty</h2>
+    <p>The app is provided "as is," without warranty of any kind, express or
+    implied — including, without limitation, warranties of merchantability,
+    fitness for a particular purpose, and non-infringement. Data inspection
+    and editing tools that touch real files carry inherent risk; use
+    reasonable care, particularly with the query console and bulk operations.</p>
+  </section>
+
+  <section>
+    <span class="num">05</span>
+    <h2>Limitation of liability</h2>
+    <p>To the maximum extent permitted by law, the developer is not liable for
+    any indirect, incidental, special, or consequential damages — including
+    lost data, lost profits, or business interruption — arising from your use
+    of the app, even if advised of the possibility of such damages.</p>
+  </section>
+
+  <section>
+    <span class="num">06</span>
+    <h2>Third-party components</h2>
+    <p>The app uses Realm's open-source library to read and write
+    <code>.realm</code> files, under Realm's own license terms. No other
+    third-party services or SDKs are embedded in the app.</p>
+  </section>
+
+  <section>
+    <span class="num">07</span>
+    <h2>Changes to the app and these terms</h2>
+    <p>Features may change between updates, and these terms may be revised
+    from time to time; the date above reflects the latest revision. Continued
+    use after a change means you accept the updated terms.</p>
+  </section>
+
+  <section>
+    <span class="num">08</span>
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws applicable in the developer's
+    jurisdiction, without regard to conflict-of-law principles, except where
+    Apple's Media Services terms take precedence for App Store distribution.</p>
+  </section>
+
+  <section>
+    <span class="num">09</span>
+    <h2>Contact</h2>
+    <p>Questions about these terms:</p>
+    <div class="contact">
+      <a href="mailto:alice.turcanu91@gmail.com">alice.turcanu91@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>Data Inspector Pro · <a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></footer>
+</div>
+</body>
+</html>
