@@ -170,7 +170,7 @@
 <div class="page">
   <span class="kicker">Privacy Policy</span>
   <h1>Data Inspector Pro collects nothing.</h1>
-  <p class="meta">Effective August 11, 2026</p>
+  <p class="meta">Effective October 5, 2026</p>
 
   <p class="lede">
     There is no network code in the app — <strong>no analytics, no crash
@@ -184,6 +184,10 @@
     <p>None. Data Inspector Pro has never requested a network entitlement, so
     it has no way to send anything anywhere even if it wanted to. There is no
     server, no analytics SDK, and no crash reporter bundled with the app.</p>
+    <p>The subscription is bought through the App Store. Apple takes the
+    payment and tells the app one thing: whether a subscription is active on
+    this Apple Account. The app never sees your name, your Apple Account or
+    your payment details, and neither does the developer.</p>
   </section>
 
   <section>
@@ -198,16 +202,35 @@
 
   <section>
     <span class="num">03</span>
-    <h2>Safety copies</h2>
+    <h2>Safety copies and snapshots</h2>
     <p>The first time you unlock a file for editing, Data Inspector Pro copies
     it into the app's own sandboxed container so <code>File ▸ Revert to
-    Safety Copy</code> can restore the original exactly. These copies stay on
-    your Mac, are never transmitted, and are deleted automatically after two
-    weeks — or immediately, from <code>Settings ▸ Behaviour ▸ Delete All</code>.</p>
+    Safety Copy</code> can restore the original exactly. A copy is also taken
+    before a change that cannot be undone, such as dropping a table. These
+    automatic copies stay on your Mac, are never transmitted, and are deleted
+    after two weeks.</p>
+    <p>Snapshots you take yourself, from <code>File ▸ Snapshots</code>, are kept
+    until you delete them — deleting something you deliberately named and chose
+    to keep would not be housekeeping. They live in the same container and are
+    equally never transmitted. Everything the app has copied, automatic or not,
+    is listed with its size in <code>Settings ▸ Behaviour</code> and can be
+    removed there at any time with <code>Delete All</code>.</p>
   </section>
 
   <section>
     <span class="num">04</span>
+    <h2>Encrypted databases</h2>
+    <p>Encrypted Realm and SQLCipher files are decrypted in memory so their
+    contents can be shown. The key or passphrase you type is held in memory for
+    as long as the file is open and is never written to disk, never stored in
+    the keychain, and never sent anywhere. No decrypted copy of the file is
+    written either — unless you ask for one with <code>File ▸ Save Decrypted
+    Copy</code>, which writes a plain, unencrypted database to the location you
+    choose and tells you that is what it is.</p>
+  </section>
+
+  <section>
+    <span class="num">05</span>
     <h2>Sandbox and permissions</h2>
     <p>The app runs inside Apple's App Sandbox. It can read or write only the
     files and folders you explicitly grant through the system's open panel.
@@ -217,7 +240,7 @@
   </section>
 
   <section>
-    <span class="num">05</span>
+    <span class="num">06</span>
     <h2>Third parties</h2>
     <p>None are involved. No advertising SDKs, no analytics vendors, no
     embedded frameworks that call home. The only third-party code in the app
@@ -226,21 +249,21 @@
   </section>
 
   <section>
-    <span class="num">06</span>
+    <span class="num">07</span>
     <h2>Children's privacy</h2>
     <p>Data Inspector Pro is a developer tool, not directed at children, and
     collects no personal information from anyone who uses it.</p>
   </section>
 
   <section>
-    <span class="num">07</span>
+    <span class="num">08</span>
     <h2>Changes to this policy</h2>
     <p>If this policy ever changes, the date above will change with it. Given
     what the app does, the substance is unlikely to.</p>
   </section>
 
   <section>
-    <span class="num">08</span>
+    <span class="num">09</span>
     <h2>Contact</h2>
     <p>Questions about this policy, or anything else about the app:</p>
     <div class="contact">
@@ -248,7 +271,7 @@
     </div>
   </section>
 
-  <footer>Data Inspector Pro — a native macOS tool for inspecting SQLite, Realm, Core Data, SwiftData, JSON and property list files. · <a href="support.html">Support</a> · <a href="terms.html">Terms</a></footer>
+  <footer>Data Inspector Pro — a native macOS tool for inspecting SQLite, Realm, Core Data, SwiftData, JSON and property list files. · <a href="support.html">Support</a> · <a href="terms.html">Terms of Use (EULA)</a></footer>
 </div>
 </body>
 </html>

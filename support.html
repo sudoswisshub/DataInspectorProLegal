@@ -265,17 +265,65 @@
       editing, a safety copy is made automatically, so <code>File ▸ Revert to
       Safety Copy</code> can put the original back exactly as it was. Every
       edit, insert and delete is also undoable with <code>⌘Z</code>.</p>
+      <p>For longer sessions, <code>File ▸ Snapshots</code> (<code>⇧⌘S</code>)
+      lets you take your own checkpoints and go back to any of them. A snapshot
+      is also taken automatically before a structural change that undo cannot
+      reverse, such as dropping a table.</p>
     </details>
     <details>
       <summary>Which file formats are supported?</summary>
       <p>SQLite, Core Data and SwiftData (all three share SQLite's on-disk
       format), Realm — including encrypted <code>.realm</code> files — plus
-      JSON, JSON Lines and property lists.</p>
+      JSON, JSON Lines and property lists. Encrypted SQLite databases
+      (SQLCipher) can be read too: enter the passphrase or key when asked. They
+      open read-only, and <code>File ▸ Save Decrypted Copy</code> writes a plain
+      copy if you need one for another tool.</p>
+    </details>
+    <details>
+      <summary>Can I change a table's structure?</summary>
+      <p>Yes, once the file is unlocked. The schema tab can create, rename and
+      drop tables, add, rename, change and drop columns, declare foreign keys,
+      and create and drop indexes. Every change shows you the exact SQL it will
+      run — and what it will cost, such as how many rows a drop will delete —
+      before anything happens.</p>
+    </details>
+    <details>
+      <summary>Can I automate it?</summary>
+      <p>Yes, through Shortcuts. Three actions are available: get the tables in
+      a database, run a read-only query, and export a table. They are read-only
+      by design, so a shortcut cannot modify a file while nobody is watching.</p>
     </details>
     <details>
       <summary>Does the app send my data anywhere?</summary>
       <p>No. There's no network code in the app at all. See the
       <a href="privacy.html">Privacy Policy</a> for the full detail.</p>
+    </details>
+    <details>
+      <summary>How does the subscription work?</summary>
+      <p>Data Inspector Pro is free to download and needs a subscription to
+      use, monthly or yearly. New subscribers get a free trial first, and
+      nothing is charged if you cancel at least a day before it ends. Either
+      plan unlocks everything; the yearly one costs less over a year.</p>
+    </details>
+    <details>
+      <summary>How do I cancel?</summary>
+      <p>In the app, open <code>Settings ▸ Subscription</code> and choose
+      <code>Open App Store</code>, or go to your account in the App Store and
+      pick Subscriptions. You keep access until the end of the period you've
+      already paid for.</p>
+    </details>
+    <details>
+      <summary>I bought the app before it was a subscription. Do I have to pay again?</summary>
+      <p>No. Anyone who bought Data Inspector Pro as a paid download keeps full
+      access. The app normally recognises this on its own; if it shows the
+      subscription screen anyway, choose <code>Restore Purchases</code> while
+      signed in to the Apple Account you bought it with.</p>
+    </details>
+    <details>
+      <summary>I subscribed on one Mac. How do I unlock another?</summary>
+      <p>Sign in to the App Store with the same Apple Account and choose
+      <code>Restore Purchases</code> on the subscription screen or in
+      <code>Settings ▸ Subscription</code>.</p>
     </details>
     <details>
       <summary>I found a bug or want a feature. Where do I report it?</summary>
@@ -298,7 +346,7 @@
     </div>
   </div>
 
-  <footer>Data Inspector Pro · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a></footer>
+  <footer>Data Inspector Pro · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use (EULA)</a></footer>
 </div>
 </body>
 </html>
