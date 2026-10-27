@@ -169,25 +169,25 @@
 <body>
 <div class="page">
   <span class="kicker">Privacy Policy</span>
-  <h1>Data Inspector Pro collects nothing.</h1>
-  <p class="meta">Effective October 5, 2026</p>
+  <h1>Your data stays under your control.</h1>
+  <p class="meta">Effective October 27, 2026</p>
 
   <p class="lede">
-    There is no network code in the app — <strong>no analytics, no crash
-    reporting, no account, no telemetry of any kind.</strong> Everything below
-    exists to explain that in detail, not to soften it.
+    Data Inspector Pro has <strong>no analytics, third-party crash reporting,
+    developer account, or telemetry.</strong> The app processes your files locally.
+    Apple handles App Store purchases through StoreKit.
   </p>
 
   <section>
     <span class="num">01</span>
     <h2>Data we collect</h2>
-    <p>None. Data Inspector Pro has never requested a network entitlement, so
-    it has no way to send anything anywhere even if it wanted to. There is no
-    server, no analytics SDK, and no crash reporter bundled with the app.</p>
+    <p>The developer does not collect your files or usage data. The app has no
+    developer-operated server, analytics SDK, or third-party crash reporter.
+    StoreKit communicates with Apple to handle purchases and subscription status.</p>
     <p>The subscription is bought through the App Store. Apple takes the
-    payment and tells the app one thing: whether a subscription is active on
-    this Apple Account. The app never sees your name, your Apple Account or
-    your payment details, and neither does the developer.</p>
+    payment and provides the app with purchase and entitlement information.
+    The developer does not receive your payment details. Apple handles that
+    information under its own privacy policy.</p>
   </section>
 
   <section>
@@ -195,24 +195,23 @@
     <h2>The files you open</h2>
     <p>You choose every file yourself — through the open panel, a drag onto
     the window, or Finder's "Open With." The app reads that file to display
-    its schema and rows and, if you unlock it, to write your edits back. That
-    file never leaves your Mac, and nothing about its contents is reported
-    anywhere.</p>
+    its schema and rows and, if you unlock it, to write your edits back. The app does not upload the file or report its contents to the developer.
+    Files stored in a synced folder may also be handled by the sync service you use.</p>
   </section>
 
   <section>
     <span class="num">03</span>
     <h2>Safety copies and snapshots</h2>
-    <p>The first time you unlock a file for editing, Data Inspector Pro copies
+    <p>By default, when you first unlock a file for editing, Data Inspector Pro may copy
     it into the app's own sandboxed container so <code>File ▸ Revert to
     Safety Copy</code> can restore the original exactly. A copy is also taken
     before a change that cannot be undone, such as dropping a table. These
-    automatic copies stay on your Mac, are never transmitted, and are deleted
-    after two weeks.</p>
+    automatic copies are stored locally and are eligible for cleanup after two weeks.
+    You can change safety-copy settings, and size limits may apply.</p>
     <p>Snapshots you take yourself, from <code>File ▸ Snapshots</code>, are kept
     until you delete them — deleting something you deliberately named and chose
     to keep would not be housekeeping. They live in the same container and are
-    equally never transmitted. Everything the app has copied, automatic or not,
+    stored locally as well. Everything the app has copied, automatic or not,
     is listed with its size in <code>Settings ▸ Behaviour</code> and can be
     removed there at any time with <code>Delete All</code>.</p>
   </section>
@@ -232,20 +231,27 @@
   <section>
     <span class="num">05</span>
     <h2>Sandbox and permissions</h2>
-    <p>The app runs inside Apple's App Sandbox. It can read or write only the
-    files and folders you explicitly grant through the system's open panel.
+    <p>The app runs inside Apple's App Sandbox. It can access its own container and
+    files and folders you choose using the open panel, drag and drop, Finder or Shortcuts.
     Those grants are stored on your Mac as security-scoped bookmarks so you
     aren't asked again on relaunch — Apple's mechanism, not ours, and not
-    something we can see.</p>
+    information sent to the developer.</p>
   </section>
 
   <section>
     <span class="num">06</span>
     <h2>Third parties</h2>
-    <p>None are involved. No advertising SDKs, no analytics vendors, no
-    embedded frameworks that call home. The only third-party code in the app
-    is Realm's own library, used solely to read and write <code>.realm</code>
-    files you open.</p>
+    <p>The app uses third-party libraries, including Realm, Lottie and ZIPFoundation.
+    It does not use advertising or analytics services. Apple handles App Store
+    transactions and may process information according to its own policies.</p>
+  </section>
+
+  <section>
+    <h2>Local app data</h2>
+    <p>The app stores preferences, recent file references, saved queries and
+    other working data locally. You can clear recent files in the app and delete
+    safety copies and snapshots in Settings. macOS and your backup or sync services
+    may retain their own copies according to their settings.</p>
   </section>
 
   <section>
